@@ -211,7 +211,7 @@ public class TeamController {
         return new ResponseEntity<>(jsonObject.toJSONString(),HttpStatus.CREATED);
     }
     @GetMapping("/getAll")
-    public List<Team> getAll(){
-        return this.teamService.selectAll();
+    public ResponseEntity<List<Team>> getAllData(){
+        return ResponseEntity.ok(this.teamService.selectAll());
     }
 }
