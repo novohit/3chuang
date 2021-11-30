@@ -254,9 +254,14 @@ public class TeamService {
 
     public List<Team> selectAll() {
         Example example =new Example(Team.class);
+
         //这里注意 要写实体类的属性名 而不是数据库的字段名 create_time
         example.orderBy("date");
-        return this.teamMapper.selectByExample(example);
+        List<Team> teams = this.teamMapper.selectByExample(example);
+        teams.forEach(team -> {
+            team.setResources(team.getResources().split("/")[3].split("\"")[0]);
+        });
+        return teams;
     }
 
     public List<String> selectAllUrls() {

@@ -210,4 +210,8 @@ public class TeamController {
         jsonObject.put("message","下载成功");
         return new ResponseEntity<>(jsonObject.toJSONString(),HttpStatus.CREATED);
     }
+    @GetMapping("/getAll")
+    public List<Team> getAll(){
+        return this.teamService.selectAll();
+    }
 }
