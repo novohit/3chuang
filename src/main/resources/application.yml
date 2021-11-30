@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://116.62.108.144/system
+    username: root
+    password: root
+  servlet:
+    multipart:
+      max-file-size: 10MB
+server:
+  port: 8083
+  servlet:
+    encoding:
+      enabled: true
+      charset: UTF-8
+      force: true
