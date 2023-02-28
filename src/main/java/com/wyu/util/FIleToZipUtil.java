@@ -7,7 +7,7 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 /**
- * @author wyu
+ * @author novo
  * @date 2021/11/9-23:58
  */
 public class FIleToZipUtil {

@@ -5,7 +5,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
 /**
- * @author wyu
+ * @author novo
  * @since 2023-02-27 18:38
  */
 @ConfigurationProperties(prefix = "aliyun.oss")

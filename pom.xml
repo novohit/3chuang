@@ -29,6 +29,11 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.3</version>
         </dependency>
+        <dependency>
+            <groupId>com.artofsolving</groupId>
+            <artifactId>jodconverter</artifactId>
+            <version>2.2.1</version>
+        </dependency>
 
         <!--通用mapper起步依赖-->
         <dependency>

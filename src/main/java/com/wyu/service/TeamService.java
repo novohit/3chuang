@@ -6,9 +6,9 @@ import com.wyu.common.PageResult;
 import com.wyu.component.OSSComponent;
 import com.wyu.mapper.TeamMapper;
 import com.wyu.model.Team;
-import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 import tk.mybatis.mapper.entity.Example;
 
@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 
 
 /**
- * @author wyu
+ * @author novo
  * @date 2021/11/7-20:35
  */
 @Service
@@ -34,7 +34,7 @@ public class TeamService {
         Example example = new Example(Team.class);
         Example.Criteria criteria = example.createCriteria();
         //添加模糊查询
-        if (StringUtils.isNotBlank(key)) {//key 不为空才进行模糊查询 否则查询所有
+        if (StringUtils.hasText(key)) {//key 不为空才进行模糊查询 否则查询所有
             criteria.andLike("username", "%" + key + "%").orLike("phone", "%" + key + "%");
         }
         //添加分页

@@ -12,7 +12,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
 /**
- * @author wyu
+ * @author novo
  * @date 2021/11/9-11:49
  */
 

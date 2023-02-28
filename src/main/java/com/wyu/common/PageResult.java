@@ -3,7 +3,7 @@ package com.wyu.common;
 import java.util.List;
 
 /**
- * @author wyu
+ * @author novo
  * @date 2021/10/28-14:58
  */
 public class PageResult<T> {

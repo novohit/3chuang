@@ -9,7 +9,7 @@ import tk.mybatis.mapper.common.Mapper;
 import java.util.List;
 
 /**
- * @author wyu
+ * @author novo
  * @date 2021/11/7-20:35
  */
 public interface TeamMapper extends Mapper<Team> {

@@ -17,7 +17,7 @@ import javax.validation.ConstraintViolationException;
 import java.util.List;
 
 /**
- * @author wyu
+ * @author novo
  * @date 2023-02-21 13:52
  */
 @ControllerAdvice
@@ -79,7 +79,7 @@ public class GlobalExceptionHandler {
         for (ConstraintViolation<?> error : e.getConstraintViolations()) {
             errorMsg.append(error.getMessage()).append(";");
         }
-        log.error("[参数异常] url:[{}]", requestUrl, e);
+        log.error("[参数异常] url:[{}] msg:[{}]", requestUrl, errorMsg);
         return Resp.error(errorMsg.toString());
     }
 
@@ -97,7 +97,7 @@ public class GlobalExceptionHandler {
         String requestUrl = request.getRequestURI();
         String method = request.getMethod();
         String errorMsg = formatAllErrorMessages(e.getAllErrors());
-        log.error("[参数异常] url:[{}]", requestUrl, e);
+        log.error("[参数异常] url:[{}] msg:[{}]", requestUrl, errorMsg);
         return Resp.error(errorMsg);
     }
 
