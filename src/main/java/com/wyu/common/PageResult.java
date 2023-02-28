@@ -1,9 +1,9 @@
-package com.novo.common;
+package com.wyu.common;
 
 import java.util.List;
 
 /**
- * @author novo
+ * @author wyu
  * @date 2021/10/28-14:58
  */
 public class PageResult<T> {

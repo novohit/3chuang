@@ -1,4 +1,4 @@
-package com.novo.utils;
+package com.wyu.util;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
@@ -7,13 +7,12 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 /**
- * @author novo
+ * @author wyu
  * @date 2021/11/9-23:58
  */
 public class FIleToZipUtil {
     /**
-     *
-     * @param files List<File> 作为参数传进来，就是把多个文件的路径放到一个list里面
+     * @param files    List<File> 作为参数传进来，就是把多个文件的路径放到一个list里面
      * @param response
      * @return
      * @throws Exception
@@ -22,7 +21,7 @@ public class FIleToZipUtil {
 
         try {
             // 临时文件夹 最好是放在服务器上，方法最后有删除临时文件的步骤
-            String zipFilename = "/root/file/temp/汇总.zip";
+            String zipFilename = "/root/wyu_collect/file/temp/all.zip";
             File file = new File(zipFilename);
             file.createNewFile();
             if (!file.exists()) {

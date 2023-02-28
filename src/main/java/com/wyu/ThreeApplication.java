@@ -1,4 +1,4 @@
-package com.novo;
+package com.wyu;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,11 +7,11 @@ import tk.mybatis.spring.annotation.MapperScan;
 
 @SpringBootApplication
 @EnableSwagger2
-@MapperScan("com.novo.mapper")
-public class RegisterApplication {
+@MapperScan("com.wyu.mapper")
+public class ThreeApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(RegisterApplication.class, args);
+        SpringApplication.run(ThreeApplication.class, args);
     }
 
 }

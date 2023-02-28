@@ -1,4 +1,4 @@
-package com.novo.utils;
+package com.wyu.util;
 
 import com.artofsolving.jodconverter.DefaultDocumentFormatRegistry;
 import com.artofsolving.jodconverter.DocumentConverter;
@@ -12,26 +12,36 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
 /**
- * @author novo
+ * @author wyu
  * @date 2021/11/9-11:49
  */
 
 
-/**  * 文件格式转换工具类  */
+/**
+ * 文件格式转换工具类
+ */
 public class FileConvertUtil {
-    /** 默认转换后文件后缀 */
+    /**
+     * 默认转换后文件后缀
+     */
     private static final String DEFAULT_SUFFIX = "pdf";
-    /** openoffice_port */
+    /**
+     * openoffice_port
+     */
     private static final Integer OPENOFFICE_PORT = 8100;
 
-    /**      * 方法描述 office文档转换为PDF(处理本地文件)      *      * @param sourcePath 源文件路径      * @param suffix     源文件后缀      * @return InputStream 转换后文件输入流      */
+    /**
+     * 方法描述 office文档转换为PDF(处理本地文件)      *      * @param sourcePath 源文件路径      * @param suffix     源文件后缀      * @return InputStream 转换后文件输入流
+     */
     public static InputStream convertLocaleFile(String sourcePath, String suffix) throws Exception {
         File inputFile = new File(sourcePath);
         InputStream inputStream = new FileInputStream(inputFile);
         return covertCommonByStream(inputStream, suffix);
     }
 
-    /**      * 方法描述  office文档转换为PDF(处理网络文件)      *      * @param netFileUrl 网络文件路径      * @param suffix     文件后缀      * @return InputStream 转换后文件输入流      */
+    /**
+     * 方法描述  office文档转换为PDF(处理网络文件)      *      * @param netFileUrl 网络文件路径      * @param suffix     文件后缀      * @return InputStream 转换后文件输入流
+     */
     public static InputStream convertNetFile(String netFileUrl, String suffix) throws Exception {
         // 创建URL
         URL url = new URL(netFileUrl);
@@ -47,7 +57,9 @@ public class FileConvertUtil {
         return null;
     }
 
-    /**      * 方法描述  将文件以流的形式转换      *      * @param inputStream 源文件输入流      * @param suffix      源文件后缀      * @return InputStream 转换后文件输入流      */
+    /**
+     * 方法描述  将文件以流的形式转换      *      * @param inputStream 源文件输入流      * @param suffix      源文件后缀      * @return InputStream 转换后文件输入流
+     */
     public static InputStream covertCommonByStream(InputStream inputStream, String suffix) throws Exception {
         ByteArrayOutputStream out = new ByteArrayOutputStream();
         OpenOfficeConnection connection = new SocketOpenOfficeConnection(OPENOFFICE_PORT);
@@ -63,9 +75,11 @@ public class FileConvertUtil {
         return outputStreamConvertInputStream(out);
     }
 
-    /**      * 方法描述 outputStream转inputStream      */
+    /**
+     * 方法描述 outputStream转inputStream
+     */
     public static ByteArrayInputStream outputStreamConvertInputStream(final OutputStream out) throws Exception {
-        ByteArrayOutputStream baos=(ByteArrayOutputStream) out;
+        ByteArrayOutputStream baos = (ByteArrayOutputStream) out;
         return new ByteArrayInputStream(baos.toByteArray());
     }
 

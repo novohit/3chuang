@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:13307/3chuang?characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+server:
+  port: 8088
+  servlet:
+    encoding:
+      enabled: true
+      charset: UTF-8
+      force: true
+aliyun:
+  oss:
+    endpoint:
+    access-key-id:
+    access-key-secret:
+    bucket-name:
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

@@ -8,11 +8,11 @@
         <version>2.5.6</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.novo</groupId>
-    <artifactId>register</artifactId>
+    <groupId>wyu</groupId>
+    <artifactId>3chuang</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>register</name>
+    <name>3chuang</name>
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>1.8</java.version>
@@ -20,13 +20,8 @@
     <dependencies>
         <dependency>
             <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger-ui</artifactId>
-            <version>2.9.2</version>
-        </dependency>
-        <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-swagger2</artifactId>
-            <version>2.9.2</version>
+            <artifactId>springfox-boot-starter</artifactId>
+            <version>3.0.0</version>
         </dependency>
         <!--集合json转换-->
         <dependency>
@@ -35,22 +30,6 @@
             <version>1.2.3</version>
         </dependency>
 
-        <!--openoffice-->
-        <dependency>
-            <groupId>com.artofsolving</groupId>
-            <artifactId>jodconverter</artifactId>
-            <version>2.2.1</version>
-        </dependency>
-        <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-            <version>2.6</version>
-        </dependency>
-        <dependency>
-            <groupId>commons-lang</groupId>
-            <artifactId>commons-lang</artifactId>
-            <version>2.6</version>
-        </dependency>
         <!--通用mapper起步依赖-->
         <dependency>
             <groupId>tk.mybatis</groupId>
@@ -69,9 +48,24 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+        <!--aliyun oss-->
+        <dependency>
+            <groupId>com.aliyun.oss</groupId>
+            <artifactId>aliyun-sdk-oss</artifactId>
+            <version>3.10.2</version>
+        </dependency>
+        <dependency>
             <groupId>org.mybatis.spring.boot</groupId>
             <artifactId>mybatis-spring-boot-starter</artifactId>
             <version>2.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <!--<scope>provided</scope>-->
         </dependency>
 
         <dependency>
